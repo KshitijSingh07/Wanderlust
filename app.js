@@ -85,7 +85,9 @@ function wrapAsync(fn) {
 }
 
 
-
+app.get("/", (req,res)=>{
+    res.redirect("/listings");
+});
 
 
 
