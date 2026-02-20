@@ -39,7 +39,9 @@ const store = MongoStore.create({
         secret: process.env.SECRET,
     },
     touchAfter: 24*3600,
+    
 })
+console.log("DB_URL =", process.env.DB_URL);
 app.use(session({store:store,secret: process.env.SECRET, saveUninitialized: true, resave: false }));
 app.use(passport.initialize());
 app.use(passport.session());
